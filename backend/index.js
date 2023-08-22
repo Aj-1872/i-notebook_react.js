@@ -1,20 +1,14 @@
-const express = require("express");
-const mongoose = require("mongoose");
+const connectToMongo = require('./db');
+const express = require('express')
 
-const app = express();
+connectToMongo();
+const app = express()
+const port = 3000
 
-mongoose.connect("mongodb://localhost:27017/latestdb",{
-
-    useNewUrlParser:true, useUnifiedTopology:true
-
-},(err)=>{
-    if(err){
-        console.log(err)
-    }else{
-        console.log("connected");
-    }
+app.get('/', (req, res) => {
+    res.send('Hello World!')
 })
 
-app.listen(3000)
-
-
+app.listen(port, () => {
+    console.log(`Example app listening on port ${port}`)
+})

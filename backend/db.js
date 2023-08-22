@@ -1,14 +1,14 @@
-const mongoose = require("mongoose");
-const mongoUrl = "mongodb://localhost:27017"; // Replace with your MongoDB URL
+const mongoose = require('mongoose');
+const mongoURI = "mongodb://127.0.0.1:27017";
 
-// Example function that returns a Promise
-async function connectToMongo() {
+
+const connectToMongo = async () => {
     try {
-        await mongoose.connect(mongoUrl, { useNewUrlParser: true, useUnifiedTopology: true });
-        console.log("Connected to MongoDB");
+        await mongoose.connect(mongoURI);
+        console.log("Connected to MongoDB successfully");
     } catch (error) {
         console.error("Error connecting to MongoDB:", error);
-        throw error; // Re-throw the error for further handling
     }
-}
+};
+
 module.exports = connectToMongo;
