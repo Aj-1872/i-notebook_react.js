@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom'
 const Navbar = () => {
     return (
         <div>
-
             <nav className="navbar navbar-expand-lg bg-body-tertiary">
                 <div className="container-fluid">
                     <Link className="navbar-brand" to="#">Navbar</Link>
@@ -19,8 +18,6 @@ const Navbar = () => {
                             <li className="nav-item">
                                 <Link className="nav-link" to="/About">About</Link>
                             </li>
-
-
                         </ul>
                         <form className="d-flex" role="search">
                             <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />

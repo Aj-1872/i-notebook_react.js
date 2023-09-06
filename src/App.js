@@ -8,14 +8,11 @@ function App() {
   return (
     <Fragment>
       <Router>
-
         <Navbar />
         <Routes>
           <Route path='/Home' element={<Home />} />
           <Route path='/About' element={<About />} />
-
         </Routes>
-
       </Router>
     </Fragment>
   );
